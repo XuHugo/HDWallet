@@ -1,0 +1,69 @@
+<html>
+<head>
+<link rel="stylesheet" herf="/css/bootstrap.min.css">
+</head>
+<body>
+<title>HDWallet</title>
+<div class="alert alert-info" id="info" role="alert">Info</div>
+<hr>
+<select id="network">
+  <option value="main" selected="selected">Main</option>
+  <option value="ropsten">Ropsten</option>
+  <option value="kovan">Kovan</option>
+  <option value="rinkeby">Rinkeby</option>
+</select>
+<hr>
+<div class="container">
+    <h2 class="text-xs-center">Seed</h2>
+    <form>
+        <div class="form-group">
+            <label for="seed">Enter 12-word seed</label>
+            <input type="text" style="width:480px;" class="form-control" id="seed">
+        </div>
+        <button type="button"class="btn btn-primary" onclick="generate_address()">Show Address</button>
+    </form>
+    <hr>
+    <h2 class="text-xs-center">Address</h2>
+    <ol id="list"></ol>
+    <hr>
+    <h2 class="text-xs-center">Send</h2>
+    <form>
+        <div class="form-group">
+            <label for="from address">From address</label>
+            <input type="text" style="width:480px;" class="form-control" id="from_address">
+        <div>
+        <div class="form-group">
+            <label for="to address">To address(or Token address)</label>
+            <input type="text" style="width:480px;" class="from-control" id="to_address">
+        <div>
+        <div class="form-group">
+            <label for="gas price">Gas Price(Gwei)</label>
+            <input type="text" style="width:480px;" class="from-control" id="gas_price">
+        <div>
+		<div class="form-group">
+             <label for="gas">Gas</label>
+             <input type="text" style="width:480px;" class="from-control" id="gas">
+        <div>
+        <div class="form-group">
+            <label for="data">Token data</label>
+            <input type="text" style="width:480px;" class="from-control" id="data">
+        <div>
+		<div class="form-group">
+		    <label for="amount">Token value</label>
+		    <input type="text" style="width:480px;" class="from-control" id="amount">
+	    <div>
+        <div class="form-group">
+            <label for="ether">Ether</label>
+            <input type="text" class="from-control" id="ether">
+        <div>
+        <div class="form-group">
+             <button type="button" class="btn btn-primary" onclick="send_ether()">Send Ether</button>
+        <div>
+    </form>
+</div>
+<script src="js/web3.min.js"></script>
+<script src="js/hooked-web3-provider.min.js"></script>
+<script src="js/lightwallet.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
